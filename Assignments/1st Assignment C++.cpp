@@ -2,7 +2,7 @@
 using namespace std;
 int main()
 {
-   int age;
+    int age;
     string name;
     cout << "Enter your Name ";
     cin >> name;
@@ -10,7 +10,7 @@ int main()
     cin >> age;
     if (age < 11)
     {
-        cout << name << " is child";
+        cout << name << "\t" << " is child";
     }
     else if (age >= 12 && age <= 17)
     {
@@ -24,7 +24,5 @@ int main()
     {
         cout << name << " is man";
     }
-
-
-return 0;
+    return 0;
 }
