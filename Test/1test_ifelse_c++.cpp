@@ -2,11 +2,12 @@
 using namespace std;
 int main()
 {
-//     Write a C++ program that takes three integers as input: num1, num2, and num3. The program should print:
-// "All are equal" if all three numbers are the same
+/* Write a C++ program that takes three integers as input: num1, num2, and num3. The program should print:
+ "All are equal" if all three numbers are the same
 // "Two are equal" if any two of the numbers are equal
 // "All are different" if all numbers are different
 // Additionally, if the sum of any two numbers equals the third, also print "Sum match found"
+*/ 
     int num1,num2,num3;
     cout << "Enter 1st number: ";
     cin >> num1;
