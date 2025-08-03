@@ -2,45 +2,48 @@
 using namespace std;
 int main()
 {
-    int a,b,num1;
-    int fact = 1;
-
     //1st task
-    cout << "Enter a number:\t";
-    cin >> a;
-    // for (int i = a; i <= 1; i--)
+    // int a;
+    // int fact = 1;
+    
+    // cout << "Enter a number:\t";
+    // cin >> a;
+    
+    // for (int i = a; i > 1; i--)
     // {
-    //     b = fact * i;
+    //     fact = fact * i;
+    //     // 1*3 = 3
     // }
-    for(int i = fact ; i <= a; i++){
-        fact *= i;
-    }
-    cout << "The factorial of number " << a << " is = " << fact;
-
+    // // for(int i = fact ; i <= a; i++){
+    // //     // fact  = fact *i
+    // //     fact *= i;
+    // // }
+    
+    // cout << "The factorial of number " << a << " is = " << fact;
+        
+    
     //2nd task
+    int num1;
     cout << "\nEnter a number:\t";
     cin >> num1;
-    for (int j = 1; j == num1; j++)
+    for (int j = 1; j <= num1; j++)
     {
-        if (num1%5 == 0)
+        if (j%5 ==0 && j%3 == 0)
         {
-            cout << "The entered number is: " << "fizz";
+            cout << "buzzfizz" << endl;
         }
-        else if (num1%3 == 0)
+        else if (j%5 == 0)
         {
-            cout << "The entered number is: " << "buzz";
+            cout << "fizz" << endl;
         }
-        else if (num1%5 ==0 && j%3 == 0)
+        else if (j%3 == 0)
         {
-            cout << "The entered number is: " << "buzzfizz";
+            cout << "buzz" << endl;
         }
         else
         {
-            cout << "The entered number is: " << num1;
+            cout << j << endl;
         }
     }
-    
-
-
     return 0;
 }
