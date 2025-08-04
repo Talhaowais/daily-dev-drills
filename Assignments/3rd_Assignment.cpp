@@ -57,5 +57,14 @@ int main()
         }
     }
     cout << "The sum of all odd numbers up to " << a << " is = " << sum2 << endl;
+
+
+// Q.No.2 Write a program that prints a square of * of size N.
+// Example N = 3
+// ***
+// ***
+// ***
+    
+
     return 0;
 }
