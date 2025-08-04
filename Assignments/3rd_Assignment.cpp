@@ -28,3 +28,25 @@
 // ***
 // * *
 // ***
+#include <iostream>
+using namespace std;
+int main()
+{
+// Q.No.1 Write a program that calculates
+// the sum of even and odd numbers from 1 to N separately
+    cout << "Question No 1" << endl;
+    int a, sum;
+    cout << "Enter a number: " << endl;
+    cin >> a;
+    for (int i = 1; i <= a; i++)
+    {
+        if (i%2==0)
+        {
+            sum = sum + i;
+        }
+        cout << "The sum of even number is =\t" << sum;
+        
+    }
+    
+    return 0;
+}
