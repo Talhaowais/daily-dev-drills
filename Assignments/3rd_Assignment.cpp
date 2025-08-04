@@ -35,18 +35,27 @@ int main()
 // Q.No.1 Write a program that calculates
 // the sum of even and odd numbers from 1 to N separately
     cout << "Question No 1" << endl;
-    int a, sum;
-    cout << "Enter a number: " << endl;
+    int a, sum1;
+    int sum, sum2 = 0;
+    cout << "Enter a number: ";
     cin >> a;
+    //The sum of all even numbers
     for (int i = 1; i <= a; i++)
     {
         if (i%2==0)
         {
             sum = sum + i;
         }
-        cout << "The sum of even number is =\t" << sum;
-        
     }
-    
+    cout << "The sum of all even numbers up to " << a << " is = " << sum << endl;
+    //The sum of all odd numbers
+    for (int j = 1; j <= a; j++)
+    {
+        if (j%2!=0)
+        {
+            sum2 = sum2 + j;
+        }
+    }
+    cout << "The sum of all odd numbers up to " << a << " is = " << sum2 << endl;
     return 0;
 }
