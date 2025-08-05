@@ -64,9 +64,8 @@ int main()
 // ***
 // ***
 // ***
-    cout << "Question No 1" << endl;
+    cout << "Question No 2" << endl;
     int b;
-    //int sum, sum2 = 0;
     cout << "Enter a number: ";
     cin >> b;
     for (int i = 0; i < b; i++)
@@ -84,6 +83,15 @@ int main()
 // **
 // ***
 // ****
-    
+
+cout << "Question No 3" << endl;
+    int c;
+    cout << "Enter a number: ";
+    cin >> c;
+    for (int i = 0; i < c; i++)
+    {
+        cout << "* ";
+        cout << endl;
+    }
     return 0;
 }
