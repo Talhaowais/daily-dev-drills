@@ -46,17 +46,22 @@ int main()
         {
             sum = sum + i;
         }
-    }
-    cout << "The sum of all even numbers up to " << a << " is = " << sum << endl;
-    //The sum of all odd numbers
-    for (int j = 1; j <= a; j++)
-    {
-        if (j%2!=0)
+        if (i%2!=0)
         {
-            sum2 = sum2 + j;
+            sum2 = sum2 + i;
         }
     }
+    cout << "The sum of all even numbers up to " << a << " is = " << sum << endl;
     cout << "The sum of all odd numbers up to " << a << " is = " << sum2 << endl;
+    //The sum of all odd numbers
+    // for (int j = 1; j <= a; j++)
+    // {
+    //     if (j%2!=0)
+    //     {
+    //         sum2 = sum2 + j;
+    //     }
+    // }
+    // cout << "The sum of all odd numbers up to " << a << " is = " << sum2 << endl;
 
 
 // Q.No.2 Write a program that prints a square of * of size N.
