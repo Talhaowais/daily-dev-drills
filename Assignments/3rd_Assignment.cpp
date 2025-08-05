@@ -64,7 +64,26 @@ int main()
 // ***
 // ***
 // ***
+    cout << "Question No 1" << endl;
+    int b;
+    //int sum, sum2 = 0;
+    cout << "Enter a number: ";
+    cin >> b;
+    for (int i = 0; i < b; i++)
+    {
+        for (int j = 0; j < b; j++)
+        {
+            cout << "* ";
+        }
+        cout << endl;
+    }
     
-
+// Q.No.3  Use a for loop to print the following pattern for N rows:
+// Example N=4
+// *
+// **
+// ***
+// ****
+    
     return 0;
 }
