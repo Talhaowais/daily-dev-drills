@@ -95,8 +95,26 @@ cout << "Question No 3" << endl;
     cin >> c;
     for (int i = 0; i < c; i++)
     {
-        cout << "* ";
+        for (int j = 0; j <= i; j++)
+        {
+            cout << "* ";
+        }
         cout << endl;
     }
+
+// Q.No.4 Write a program that counts how many digits are
+// in a number using a for loop or controlled loop.
+// Example Input: 12345 
+// Output: 5
+
+// cout << "Question No 4" << endl;
+//     int d;
+//     cout << "Enter a number: ";
+//     cin >> d;
+//     for (int i = 0; i < d; i++)
+//     {
+//         /* ni ho rha */
+//     }
+    
     return 0;
 }
