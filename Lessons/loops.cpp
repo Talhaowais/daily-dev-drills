@@ -22,24 +22,45 @@ int main()
     // }
     // cout << num << endl;
 
-    for (int i = 0; i < 3; i++) // row
-    {
-        for (int j = 0; j < 3; j++) // column
-        {
-            if(i==0){
-                cout << "1 ";
-            }
-            else if(i==1){
-                cout << "2 ";
-            }
-            else if(i==2){
-                cout << "3 ";
-            }
+    // for (int i = 0; i < 3; i++) // row
+    // {
+    //     for (int j = 0; j < 3; j++) // column
+    //     {
+    //         if(i==0){
+    //             cout << "1 ";
+    //         }
+    //         else if(i==1){
+    //             cout << "2 ";
+    //         }
+    //         else if(i==2){
+    //             cout << "3 ";
+    //         }
+    //     }
+    //     cout << endl;
+        
+    // }
+
+    // int i = 123;
+    // int count=0;
+    // while(i>0){
+    //     count++;
+    //     i = i/10;
+    //     cout << i << endl;
+    //     // i++;
+    // }
+    // cout << count << endl;
+
+
+    int i=0;
+    while(i<5){
+        int j=0;
+        while(j<=i){
+            cout << "*";
+            j++;
         }
         cout << endl;
-        
+        i++;
     }
-    
     
     return 0;   
 }

@@ -34,25 +34,25 @@ int main()
 {
 // Q.No.1 Write a program that calculates
 // the sum of even and odd numbers from 1 to N separately
-    cout << "Question No 1" << endl;
-    int a, sum1;
-    int sum, sum2 = 0;
-    cout << "Enter a number: ";
-    cin >> a;
-    //The sum of all even numbers
-    for (int i = 1; i <= a; i++)
-    {
-        if (i%2==0)
-        {
-            sum = sum + i;
-        }
-        if (i%2!=0)
-        {
-            sum2 = sum2 + i;
-        }
-    }
-    cout << "The sum of all even numbers up to " << a << " is = " << sum << endl;
-    cout << "The sum of all odd numbers up to " << a << " is = " << sum2 << endl;
+    // cout << "Question No 1" << endl;
+    // int a, sum1;
+    // int sum, sum2 = 0;
+    // cout << "Enter a number: ";
+    // cin >> a;
+    // //The sum of all even numbers
+    // for (int i = 1; i <= a; i++)
+    // {
+    //     if (i%2==0)
+    //     {
+    //         sum = sum + i;
+    //     }
+    //     if (i%2!=0)
+    //     {
+    //         sum2 = sum2 + i;
+    //     }
+    // }
+    // cout << "The sum of all even numbers up to " << a << " is = " << sum << endl;
+    // cout << "The sum of all odd numbers up to " << a << " is = " << sum2 << endl;
     //The sum of all odd numbers
     // for (int j = 1; j <= a; j++)
     // {
@@ -69,18 +69,18 @@ int main()
 // ***
 // ***
 // ***
-    cout << "Question No 2" << endl;
-    int b;
-    cout << "Enter a number: ";
-    cin >> b;
-    for (int i = 0; i < b; i++)
-    {
-        for (int j = 0; j < b; j++)
-        {
-            cout << "* ";
-        }
-        cout << endl;
-    }
+    // cout << "Question No 2" << endl;
+    // int b;
+    // cout << "Enter a number: ";
+    // cin >> b;
+    // for (int i = 0; i < b; i++)
+    // {
+    //     for (int j = 0; j < b; j++)
+    //     {
+    //         cout << "* ";
+    //     }
+    //     cout << endl;
+    // }
     
 // Q.No.3  Use a for loop to print the following pattern for N rows:
 // Example N=4
@@ -89,32 +89,84 @@ int main()
 // ***
 // ****
 
-cout << "Question No 3" << endl;
-    int c;
-    cout << "Enter a number: ";
-    cin >> c;
-    for (int i = 0; i < c; i++)
-    {
-        for (int j = 0; j <= i; j++)
-        {
-            cout << "* ";
-        }
-        cout << endl;
-    }
+// cout << "Question No 3" << endl;
+//     int c;
+//     cout << "Enter a number: ";
+//     cin >> c;
+//     for (int i = 0; i < c; i++)
+//     {
+//         for (int j = 0; j <= i; j++)
+//         {
+//             cout << "* ";
+//         }
+//         cout << endl;
+//     }
 
 // Q.No.4 Write a program that counts how many digits are
 // in a number using a for loop or controlled loop.
 // Example Input: 12345 
 // Output: 5
 
-// cout << "Question No 4" << endl;
-//     int d;
-//     cout << "Enter a number: ";
-//     cin >> d;
-//     for (int i = 0; i < d; i++)
-//     {
-//         /* ni ho rha */
-//     }
-    
+    // cout << "Question No 4" << endl;
+    // int d;
+    // int count=0;
+    // cout << "Enter a number: ";
+    // cin >> d;
+    // for (; d > 0;)
+    // {
+    //     count++;
+
+    //     d=d/10;
+    // }
+    // cout << "Total digit count: " << count << endl;
+
+// Q.No.5 Write a program using a for loop to 
+// print the first N terms of the Fibonacci series.
+// Example N=5
+// Fibonacci Series
+// 1 1 2 3 5 8 13 21 34 55 
+
+    // int first = 1;
+    // int second = 1;
+    // int third;
+    // int num = 10;
+    // cout  << first << ", " << second << ", ";
+
+    // for (int i=2; i < num; i++){
+        
+    //     third = first + second;
+        
+    //     first = second;
+    //     second = third;
+        
+    //     cout << third << ", ";
+    // }
+    // cout << endl;
+
+// Q.No.6 Write a program that prints a square of * of size N.
+// Example N = 3
+// ***
+// * *
+// ***
+     cout << "Question No 6" << endl;
+    int b;
+    cout << "Enter a number: ";
+    cin >> b;
+    for (int i = 0; i < b; i++)
+    {
+        for (int j = 0; j < b; j++)
+        {
+            // if(i==0 || i==b-1 || j==0 || j==b-1){
+            if(i==b/2 && j==b/2){
+
+                cout << "  ";
+            }
+            else{
+                cout << "* ";
+            }
+        }
+        cout << endl;
+    }
+
     return 0;
 }
