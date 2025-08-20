@@ -20,13 +20,18 @@ int main()
 
     // num=num/10 => 1234
     // revnum = 54321
-    int a;
+    int a,b;
+    int count = 0;
     cout <<"Enter a number: ";
     cin >> a;
-    for (int i = 0; i < a ; i++)
+    do
     {
-        /* code */
-    }
+
+       b = (b*10^count)+(a%10);
+       b = (a%10)*;
+
+    } while (a<=0);
+    
     
     return 0;
 }
