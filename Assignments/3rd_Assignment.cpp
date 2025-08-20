@@ -148,25 +148,44 @@ int main()
 // ***
 // * *
 // ***
-     cout << "Question No 6" << endl;
-    int b;
-    cout << "Enter a number: ";
-    cin >> b;
-    for (int i = 0; i < b; i++)
-    {
-        for (int j = 0; j < b; j++)
-        {
-            // if(i==0 || i==b-1 || j==0 || j==b-1){
-            if(i==b/2 && j==b/2){
+    //  cout << "Question No 6" << endl;
+    // int b;
+    // cout << "Enter a number: ";
+    // cin >> b;
+    // for (int i = 0; i < b; i++)
+    // {
+    //     for (int j = 0; j < b; j++)
+    //     {
+    //         // if(i==0 || i==b-1 || j==0 || j==b-1){
+    //         if(i==b/2 && j==b/2){
 
-                cout << "  ";
-            }
-            else{
-                cout << "* ";
-            }
-        }
-        cout << endl;
-    }
+    //             cout << "  ";
+    //         }
+    //         else{
+    //             cout << "* ";
+    //         }
+    //     }
+    //     cout << endl;
+    // }
+
+    // 54321
+
+    // revnum = 5*10^0=5*1 = 5
+
+    // revnum = (revnum*10^count)+(num%10)
+
+    // revnum           num           count
+    // 0                12345          0
+    // 5                1234           1
+    // 54               123            2
+    // 543              12 
+
+    // num = 12345
+    
+    // revnum = (num%10)* = 5
+
+    // num=num/10 => 1234
+    // revnum = 54321
 
     return 0;
 }

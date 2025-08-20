@@ -51,16 +51,25 @@ int main()
     // cout << count << endl;
 
 
-    int i=0;
-    while(i<5){
-        int j=0;
-        while(j<=i){
-            cout << "*";
-            j++;
+    // int i=0;
+    // while(i<5){
+    //     int j=0;
+    //     while(j<=i){
+    //         cout << "*";
+    //         j++;
+    //     }
+    //     cout << endl;
+    //     i++;
+    // }
+    int num;
+    do
+    {
+        cout << "Enter a number(>0): ";
+        cin >> num;
+        if(num<=0){
+            cout << "You entered an invalid number.\n";
         }
-        cout << endl;
-        i++;
-    }
+    } while (num <=0 );
     
     return 0;   
 }
