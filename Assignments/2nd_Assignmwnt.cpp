@@ -3,23 +3,23 @@ using namespace std;
 int main()
 {
     //1st task
-    // int a;
-    // int fact = 1;
+    int a;
+    int fact = 1;
     
-    // cout << "Enter a number:\t";
-    // cin >> a;
+    cout << "Enter a number:\t";
+    cin >> a;
     
-    // for (int i = a; i > 1; i--)
-    // {
-    //     fact = fact * i;
-    //     // 1*3 = 3
+    for (int i = a; i > 1; i--)
+    {
+        fact = fact * i;
+        // 1*3 = 3
+    }
+    // for(int i = fact ; i <= a; i++){
+    //     // fact  = fact *i
+    //     fact *= i;
     // }
-    // // for(int i = fact ; i <= a; i++){
-    // //     // fact  = fact *i
-    // //     fact *= i;
-    // // }
     
-    // cout << "The factorial of number " << a << " is = " << fact;
+    cout << "The factorial of number " << a << " is = " << fact;
         
     
     //2nd task
