@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 int main()
 {
@@ -20,19 +21,19 @@ int main()
 
     // num=num/10 => 1234
     // revnum = 54321
-   int a;
-   int count, b= 0;
+   int num=0;
+   int  revnum= 0;
    cout <<"Enter a number: ";
-   cin >> a;
+   cin >> num;
    // using do_while loop
    do
    {
-      // b = (b*10^count)+(a%10);
-      b = a%10;
-      count = count * 10 + b;
-      b = b/10;
-   } while (a > 0);
-   cout << b << endl;
+      cout << "num: " << num << ", revnum: " << revnum << endl;
+      revnum = (revnum*10)+(num%10);
+      num = num/10;
+      
+   } while (num > 0);
+   cout << revnum << endl;
 
    // using while loop
    // while (a <= 0)
