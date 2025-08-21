@@ -20,18 +20,34 @@ int main()
 
     // num=num/10 => 1234
     // revnum = 54321
-    int a,b;
-    int count = 0;
-    cout <<"Enter a number: ";
-    cin >> a;
-    do
-    {
+   int a;
+   int count, b= 0;
+   cout <<"Enter a number: ";
+   cin >> a;
+   // using do_while loop
+   do
+   {
+      // b = (b*10^count)+(a%10);
+      b = a%10;
+      count = count * 10 + b;
+      b = b/10;
+   } while (a > 0);
+   cout << b << endl;
 
-       b = (b*10^count)+(a%10);
-       b = (a%10)*;
+   // using while loop
+   // while (a <= 0)
+   // {
+   //    b = a%10;
+   //    cout << b;
+   // }
 
-    } while (a<=0);
-    
-    
-    return 0;
+   // using for loop
+   // for (int i = 0; i <= a; i++)
+   // {
+   //    b = a%10;
+   //    cout << b;
+   // }
+   
+     
+   return 0;
 }
