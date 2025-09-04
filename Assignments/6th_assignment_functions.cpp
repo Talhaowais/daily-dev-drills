@@ -1,7 +1,8 @@
 #include <iostream>
 using namespace std;
 int maxOfThree(int a, int b, int c);
-bool isPrime(int n);
+// bool isPrime(int n);
+bool isPalindrome(int n);
 
 // 1. Maximum of Three Numbers
 
@@ -23,7 +24,7 @@ bool isPrime(int n);
 
 int main()
 {
-    int a,b,c,i;
+    // int a,b,c,i;
     // cout << "Enter 1st number: ";
     // cin >> a ;
     // cout << "Enter 2nd number: ";
@@ -31,7 +32,13 @@ int main()
     // cout << "Enter 3rd number: ";
     // cin >> c;
     // cout << "The greatest number is = " << maxOfThree(a,b,c) << endl;
-    cout << "The prime numbers from 1 - 100 are /n" << isPrime(i);
+    //cout << "The prime numbers from 1 - 100 are /n" << isPrime(i);
+    int num;
+    cout << "Sarghoda: " << false << endl;
+    cout << "Enter the number: ";
+    cin >> num;
+    bool check=isPalindrome(num);
+    cout << "Check " << check << endl;
     return 0;
 }
 // QS 1
@@ -52,16 +59,35 @@ int maxOfThree(int a, int b, int c)
 }
 
 // QS 2
-bool isPrime(int i)
-{
-    for (int i = 1; i >= 100; i++)
-    {
-        if (i/i==1)
-        {
+// bool isPrime(int i)
+// {
+//     for (int i = 1; i >= 100; i++)
+//     {
+//         if (i/i==1)
+//         {
             
-        }
+//         }
     
-    }
-    return true;
-}
+//     }
+//     return true;
+// }
 
+//QS 3
+bool isPalindrome(int n)
+{
+    int num=n;
+    int  revnum= 0;
+    // using do_while loop
+    do
+    {
+        cout << "num: " << num << ", revnum: " << revnum << endl;
+        revnum = (revnum*10)+(num%10);
+        num = num/10;
+        
+    } while (num > 0);
+    if (revnum == n)
+    {
+        return true;
+    }
+    return false;
+}
