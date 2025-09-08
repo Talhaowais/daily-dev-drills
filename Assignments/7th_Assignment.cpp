@@ -5,9 +5,10 @@
 #include <iostream>
 #include <math.h>
 using namespace std;
-//int factorial(int a);
-//int calculator(int a, int b, char op);
-//double celsiusToFahrenheit(double c);
+int factorial(int a);
+int calculator(int a, int b, char op);
+double celsiusToFahrenheit(double c);
+int power(int base, int exp);
 
 int main()
 {
@@ -19,15 +20,15 @@ int main()
     // factorial(a);
 
     //4th qs
-    // int a,b;
-    // char op;
-    // cout << "Enter 1st number: ";
-    // cin >> a;
-    // cout << "Enter 2nd number: ";
-    // cin >> b;
-    // cout << "Enter an operator (+, -, *, /): ";
-    // cin >> op;
-    // calculator(a , b , op);
+    int a,b;
+    char op;
+    cout << "Enter 1st number: ";
+    cin >> a;
+    cout << "Enter 2nd number: ";
+    cin >> b;
+    cout << "Enter an operator (+, -, *, /): ";
+    cin >> op;
+    calculator(a , b , op);
 
     //3rd qs
     // double celsius;
@@ -36,12 +37,13 @@ int main()
     // celsiusToFahrenheit(celsius);
 
     //2nd qs
-    int base, exp;
-    cout << "Enter the base number: ";
-    cin >> base;
-    cout << "Enter the exponent number: ";
-    cin >> exp;
-    power(base, exp);
+    // int base, exp;
+    // cout << "Enter the base number: ";
+    // cin >> base;
+    // cout << "Enter the exponent number: ";
+    // cin >> exp;
+    // power(base, exp);
+    // return 0;
 }
 
 // 1. Write a function int factorial(int n) that returns the factorial of a given number.
@@ -59,30 +61,35 @@ int factorial(int a)
 // 4. Write a function int calculator(int a, int b, char op) that takes two numbers and an operator (+, -, *, /) and returns the result.
 int calculator(int a, int b, char op)
 {
-    int c,d,e,f;
+    int ans;
     if(op == '+')
     {
-        c = a+b;
-        cout << "The result is " << c;
-        return c;
+        ans = a+b;
+        cout << "The result is " << ans;
+        return ans;
     }
     else if (op == '-')
     {
-        d = a-b;
-        cout << "The result is " << d;
-        return d;
+        ans = a-b;
+        cout << "The result is " << ans;
+        return ans;
     }
     else if (op == '*')
     {
-        e = a*b;
-        cout << "The result is " << e;
-        return e;
+        ans = a*b;
+        cout << "The result is " << ans;
+        return ans;
     }
     else if (op == '/')
     {
-        f == a/b;
-        cout << "The result is " << f;
-        return f;
+        if (b == 0)
+        {
+            cout << "Division with zero is not possible" << endl;
+            return 0;
+        }
+        ans = a/b;
+        cout << "The result is " << ans;
+        return ans;
     }  
 }
 
@@ -98,12 +105,13 @@ double celsiusToFahrenheit(double celsius)
 // 2. Write a function int power(int base, int exp) that calculates base^exp (without using pow from <cmath>).
 int power(int base, int exp)
 {
-    int c;
-    for (int i = 0; i <= base; i++)
+    int c=1;
+    for (int i = 0; i < exp; i++)
     {
-        c = base * exp;
+        c = base * c;
         /* code */
         //ni smaj a rhai k exponent ko ksy utni dafa ksy multiple krwana ha
     }
     cout << "The power of a given number is: " << c << endl;
+    return c;
 }
