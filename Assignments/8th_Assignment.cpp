@@ -9,15 +9,42 @@
 
 #include <iostream>
 using namespace std;
+string vowelsandconsonants();
 int main()
 {
 //Write a program to find the sum of all elements in an array.
+    // int arr[5]={1,2,3,4,5};
+    // int c;
+    // for(int i=arr[5]; i<=5; i++)
+    // {
+    //     c = i + c;
+    // }
+    // cout << "The sum of all number in an arry is: " << c << endl;
+
+// Write a program to find the largest and smallest elements in an array.
     int arr[5]={1,2,3,4,5};
     int c;
-    for(int i=arr[5]; i<=5; i++)
+    for(int i=arr[5]; i!='\0'; i++)
     {
-        c = i + c;
+        if (i < arr[5])
+        {
+            cout << "The smamlest number is: " << i << endl;
+        }
+        else if (i > arr[5])
+        {
+            cout << "The largest number is: " << i << endl;
+        }  
     }
-    cout << "The sum of all number in an arry is: " << c << endl;
     return 0;
+}
+
+// Write a function that takes a string and counts how many vowels and consonants it contains.
+string vowelsandconsonants()
+{
+    string input;
+    if (input == "a,e,i,o,u")
+    {
+        /* code */
+    }
+    
 }
