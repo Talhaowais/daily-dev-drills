@@ -22,29 +22,38 @@ int main()
     // cout << "The sum of all number in an arry is: " << c << endl;
 
 // Write a program to find the largest and smallest elements in an array.
-    int arr[5]={1,2,3,4,5};
-    int c;
-    for(int i=arr[5]; i!='\0'; i++)
-    {
-        if (i < arr[5])
-        {
-            cout << "The smamlest number is: " << i << endl;
-        }
-        else if (i > arr[5])
-        {
-            cout << "The largest number is: " << i << endl;
-        }  
-    }
-    return 0;
+//NOT COMPlete
+    // int arr[5]={1,2,3,4,5};
+    // int c;
+    // for(int i=arr[5]; i!='\0'; i++)
+    // {
+    //     if (i < arr[5])
+    //     {
+    //         cout << "The smamlest number is: " << i << endl;
+    //     }
+    //     else if (i > arr[5])
+    //     {
+    //         cout << "The largest number is: " << i << endl;
+    //     }  
+    // }
+    string str;
+    cout << "Enter a string: ";
+    cin >> str;
+    string vowelsandconsonants(str);
+    
 }
 
 // Write a function that takes a string and counts how many vowels and consonants it contains.
 string vowelsandconsonants()
 {
-    string input;
-    if (input == "a,e,i,o,u")
+    string str;
+    int count = 0;
+    for(int i=0; i<=str.length()+1;i++)
     {
-        /* code */
+        cout << str[i] << " ,";
+        while(str[count]!='\0')
+        {
+        count++;
+        }
     }
-    
 }
