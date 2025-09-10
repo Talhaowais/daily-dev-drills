@@ -36,24 +36,45 @@ int main()
     //         cout << "The largest number is: " << i << endl;
     //     }  
     // }
+
+
     string str;
     cout << "Enter a string: ";
     cin >> str;
-    string vowelsandconsonants(str);
-    
+    // string vowelsandconsonants(strn);
+
+    // string str;
+        int count = 0;
+        for(int i=0; i<=str.length()-1;i++)
+        {
+            if (str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u')
+            {
+                cout << "\nThe digit is: " << str[i];
+            }
+            cout << str[i];
+            while(str[count]!='\0')
+            {
+            count++;
+            } 
+        }
+        cout << "\nThe length of string is " << count << endl;
+        
+        
+    return 0;
 }
 
 // Write a function that takes a string and counts how many vowels and consonants it contains.
-string vowelsandconsonants()
-{
-    string str;
-    int count = 0;
-    for(int i=0; i<=str.length()+1;i++)
-    {
-        cout << str[i] << " ,";
-        while(str[count]!='\0')
-        {
-        count++;
-        }
-    }
-}
+// string vowelsandconsonants()
+// {
+    // string str;
+    // int count = 0;
+    // for(int i=0; i<=str.length()+1;i++)
+    // {
+    //     cout << str[i] << " ,";
+    //     while(str[count]!='\0')
+    //     {
+    //     count++;
+    //     }
+
+    // }
+// }
