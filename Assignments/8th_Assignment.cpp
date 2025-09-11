@@ -21,6 +21,25 @@ int main()
     // }
     // cout << "The sum of all number in an arry is: " << c << endl;
 
+// Write a program that counts how many times a character(user input) appears in a string.
+    // char a;
+    // int count;
+    // string str = "Hello how are you, hope you are doing great.";
+    // cout << "The string is: " << endl;
+    // cout << "Hello how are you, hope you are doing great." << endl;
+    // cout << "Now enter a characher you want to find in the above string: ";
+    // cin >> a;
+    // for(int i=0; i<=str.length()-1;i++)
+    // {
+    //     cout << str[i] << " ,";
+    //     if (str[i] == a) 
+    //     {
+    //         count++;
+    //     }
+    // }
+    // cout << "\nThe entered character appeared " << count << " times in the above string.";
+
+
 // Write a program to find the largest and smallest elements in an array.
 //NOT COMPlete
     // int arr[5]={1,2,3,4,5};
@@ -38,26 +57,27 @@ int main()
     // }
 
 
-    string str;
-    cout << "Enter a string: ";
-    cin >> str;
-    // string vowelsandconsonants(strn);
-
+// Write a function that takes a string and counts how many vowels and consonants it contains.
     // string str;
-        int count = 0;
-        for(int i=0; i<=str.length()-1;i++)
-        {
-            if (str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u')
-            {
-                cout << "\nThe digit is: " << str[i];
-            }
-            cout << str[i];
-            while(str[count]!='\0')
-            {
-            count++;
-            } 
-        }
-        cout << "\nThe length of string is " << count << endl;
+    // cout << "Enter a string: ";
+    // cin >> str;
+    // // string vowelsandconsonants(strn);
+
+    // // string str;
+    //     int count = 0;
+    //     for(int i=0; i<=str.length()-1;i++)
+    //     {
+    //         if (str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u')
+    //         {
+    //             cout << "\nThe digit is: " << str[i];
+    //         }
+    //         cout << str[i];
+    //         while(str[count]!='\0')
+    //         {
+    //         count++;
+    //         } 
+    //     }
+    //     cout << "\nThe length of string is " << count << endl;
         
         
     return 0;
