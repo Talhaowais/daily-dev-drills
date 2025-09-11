@@ -58,28 +58,37 @@ int main()
 
 
 // Write a function that takes a string and counts how many vowels and consonants it contains.
-    // string str;
-    // cout << "Enter a string: ";
-    // cin >> str;
-    // // string vowelsandconsonants(strn);
-
-    // // string str;
-    //     int count = 0;
-    //     for(int i=0; i<=str.length()-1;i++)
-    //     {
-    //         if (str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u')
-    //         {
-    //             cout << "\nThe digit is: " << str[i];
-    //         }
-    //         cout << str[i];
-    //         while(str[count]!='\0')
-    //         {
-    //         count++;
-    //         } 
-    //     }
-    //     cout << "\nThe length of string is " << count << endl;
-        
-        
+    string str = "talha";
+    cout << "The string is: ";
+    cout << "talha";
+    int counta = 0, counte = 0, counti = 0, counto = 0, countu = 0, countf, cons;
+    for(int j=0; j<=str.length()-1;j++)
+    {
+        if (str[j] == 'a')
+        {
+            counta++;
+        }
+        if (str[j] == 'e')
+        {
+            counte++;
+        }
+        if (str[j] == 'i')
+        {
+            counti++;
+        }
+        if (str[j] == 'o')
+        {
+            counto++;
+        }
+        if (str[j] == 'u')
+        {
+            countu++;
+        }  
+    }
+    countf = counta + counte + counti + counto + countu;
+    cons = str.length() - countf;
+    cout << "\nThe vowels appeared " << countf << " times in the above string.";
+    cout << "\nThe consonants appeared " << cons << " times in the above string." << endl;
     return 0;
 }
 
