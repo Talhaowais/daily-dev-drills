@@ -25,24 +25,25 @@ int main()
 
     int sizea = 0;
     int sizeb = 0;
-    cout << "Enter the size of 1st array:";
+    cout << "Enter the size of 1st array: ";
     cin >> sizea;
-    cout << "Enter the size of 2nd array:";
-    cin >> sizeb;
     int arr[sizea]={};
-    int arr[sizeb]={};
     //Enter the number for 1st array
     for(int i=0; i<sizea; i++)
     {
-        cout << "Enter the number for 1st array " << i+1 <<" : \n";
+        cout << "Enter the number for 1st array " << i+1 <<" : " << endl;
         cin >> arr[i]; 
     }
+    cout << "Enter the size of 2nd array: ";
+    cin >> sizeb;
+    int ar[sizeb]={};
     //Enter the number for 2nd array
     for(int j=0; j<sizeb; j++)
     {
         cout << "Enter the number for 2nd array " << j+1 <<" : \n";
-        cin >> arr[j]; 
+        cin >> ar[j]; 
     }
+    cout << "The combined result of array is: " << ;
 
 
 
