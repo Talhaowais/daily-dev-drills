@@ -5,6 +5,7 @@
 using namespace std;
 int main()
 {
+
 // Qs1 -> Count Words in a Sentence -> Write a program to count the number of words in a given string.
     // string str = "Lets go to work"; //agr mai yha yeh commas na dalo to first word ni show hota.
     // int count = 0;
@@ -21,10 +22,11 @@ int main()
     // }
     // cout << "Total words in a Sentence are : " << count << endl;
 
-// QS -> 2 Merge Two Arrays -> Write a program to merge two arrays into one.
 
+// QS -> 2 Merge Two Arrays -> Write a program to merge two arrays into one.
     int sizea = 0;
     int sizeb = 0;
+    int sizec = 0;
     cout << "Enter the size of 1st array: ";
     cin >> sizea;
     int arr[sizea]={};
@@ -43,10 +45,10 @@ int main()
         cout << "Enter the number for 2nd array " << j+1 <<" : \n";
         cin >> ar[j]; 
     }
-    cout << "The combined result of array is: " << ;
-
-
-
-
+    sizec = sizea + sizeb;
+    int a[sizec]={};
+    a[sizec]= arr[sizea] + ar[sizeb];
+    cout << "The combined size of array is: " << sizec << endl;
+    cout << "The combine result of both array is: " << a[sizec] << endl; // yeh garbage value return kr rha 
     return 0;
 }
