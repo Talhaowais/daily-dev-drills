@@ -18,17 +18,30 @@ for(let i=0; i<myarr.length; i++)
 //break
 for (let index = 1; index <=20; index++) {
     if(index == 5){
-        console.log(`Required number ${index} is detected.`);
+       // console.log(`Required number ${index} is detected.`);
         break;
     }
-    console.log(`Value of index is ${index}`); 
+    //console.log(`Value of index is ${index}`); 
 }
 
 //continue
 for (let index = 1; index <=20; index++) {
     if(index == 5){
-        console.log(`Required number ${index} is detected.`);
+        // console.log(`Required number ${index} is detected.`);
         continue;
     }
-    console.log(`Value of index is ${index}`); 
+    // console.log(`Value of index is ${index}`); 
 }
+
+// while and do while loop
+let i = 0;
+while (i<=10) {
+    console.log(`The value is ${i}`);
+    i = i+2;
+}
+
+let j = 0
+do {
+    console.log(`The scor is ${j}`);
+    j++
+} while (j<=10);
