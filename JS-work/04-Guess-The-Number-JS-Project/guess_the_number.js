@@ -1,12 +1,12 @@
-const randomNumber = parseInt(Math.random() * 100 + 1);
-const submit = document.querySelector('#submit');
+let randomNumber = parseInt(Math.random() * 100 + 1);
+const submit = document.querySelector('#subt');
 const userInput = document.querySelector('#guessField')
 const guessSlots = document.querySelector('.guesses')
 const remainingSlots = document.querySelector('.lastResult')
 const lowOrHigh = document.querySelector('.lowOrHi')
 const start = document.querySelector('.resultParas')
 
-document.createElement('p');
+const p =document.createElement('p');
 let prevGuess = [];
 let  numberGuess = 1;
 
