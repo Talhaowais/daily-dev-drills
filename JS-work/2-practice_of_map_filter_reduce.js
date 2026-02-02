@@ -128,9 +128,69 @@ let rolesCount = usersRoles7.reduce((acc, r) => {
   }
   return acc
 }, { admin: 0, user: 0 })
-console.log(rolesCount);
+// console.log(rolesCount);
 
 
+// Step 8
+/* Question 1 — Sum only valid numbers
+const scores8 = [10, null, 20, undefined, 30, "40"];
+🎯 Goal:
+60
+👉 Count only numbers
+👉 "40" should be ignored */
+const scores8 = [10, null, 20, undefined, 30, "40"];
+let asum = scores8.reduce((acc,red) => typeof red === "number" ? acc + red : acc, 0)
+// console.log(asum);
+
+
+// Question 2 — Default values in objects
+/* Goal:
+800
+👉 If balance missing → treat as 0
+👉 Use only reduce */
+const users8 = [
+  { name: "Ali", balance: 500 },
+  { name: "Sara" },
+  { name: "Ahmed", balance: 300 }
+];
+let tuser = users8.reduce((acc,val) => acc + (val.balance || 0), 0)
+// console.log(tuser);
+
+//Question 3 — Find minimum (negative numbers)
+/*const temps8 = [-10, -20, -5, -30];
+🎯 Goal:
+-30
+👉 No Math.min
+👉 Proper initial value matters */
+const temps8 = [-10, -20, -5, -30];
+let ft = temps8.reduce((acc, t) => {
+  if(t < acc){
+    acc = t
+  }return acc
+},temps8[0])
+console.log(ft);
+
+
+// Step 9
+// Question 1 — Group users by role
+/* Goal output:
+{
+  admin: ["Ali", "Ahmed"],
+  user: ["Sara", "Ayesha"],
+  manager: ["Usman"]
+}
+👉 Rules:
+use only reduce
+no loops
+accumulator starts as {}*/
+const users9 = [
+  { name: "Ali", role: "admin" },
+  { name: "Sara", role: "user" },
+  { name: "Ahmed", role: "admin" },
+  { name: "Ayesha", role: "user" },
+  { name: "Usman", role: "manager" }
+];
+users9.reduce((acc, val) => {})
 
 
 
