@@ -100,3 +100,62 @@ const users2 = [
 ];
 let finalUser = users2.filter((u2) => u2.active == true).reduce((acc,rd) => acc + rd.balance, 0)
 console.log(finalUser);
+
+
+// Step 5:
+
+// Tasks:
+//  Keep items where price × qty > 2000
+//  Convert them into this format:
+const cart5 = [
+  { item: "Laptop", price: 80000, qty: 1 },
+  { item: "Mouse", price: 800, qty: 2 },
+  { item: "Keyboard", price: 1500, qty: 1 },
+  { item: "USB Cable", price: 500, qty: 3 }
+];
+let finalCart5 = cart5.filter((c5) => c5.price * c5.qty > 2000).map((c5) => ({
+  item: c5.item, 
+  total: c5.price
+}))
+console.log(finalCart5[0]);
+
+// Tasks:
+//  Remove students with marks below 60
+//  Add 10 bonus marks to remaining students
+//  Calculate the average marks
+const students5 = [
+  { name: "Ali", marks: 85 },
+  { name: "Sara", marks: 45 },
+  { name: "Ahmed", marks: 72 },
+  { name: "Ayesha", marks: 90 },
+  { name: "Usman", marks: 60 }
+];
+let finalstnd = students5.filter((s5) => s5.marks > 60).map((s5) => ({
+  name: s5.name,
+  marks: s5.marks + 10
+}))
+console.log(finalstnd);
+console.log(finalstnd.length);
+let totalmarks = finalstnd.reduce((acc, s5) => acc + s5.marks, 0)
+let average = totalmarks/finalstnd.length
+console.log(average);
+
+// Tasks:
+//  Keep only completed orders
+//  Double the amount if amount < 500
+//  Find the highest final amount
+const orders5 = [
+  { id: 1, status: "completed", amount: 500 },
+  { id: 2, status: "pending", amount: 300 },
+  { id: 3, status: "completed", amount: 700 },
+  { id: 4, status: "cancelled", amount: 400 },
+  { id: 5, status: "completed", amount: 200 }
+];
+let greatest = orders5.filter((o5) => o5.status == "completed")
+.map((o5) => o5.amount < 500 ? o5.amount * 2 : o5.amount)
+.reduce((acc, o5) => o5 > acc ? o5 : acc, 0)
+console.log(greatest);
+
+
+
+
