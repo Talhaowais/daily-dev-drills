@@ -168,7 +168,7 @@ let ft = temps8.reduce((acc, t) => {
     acc = t
   }return acc
 },temps8[0])
-console.log(ft);
+// console.log(ft);
 
 
 // Step 9
@@ -190,7 +190,81 @@ const users9 = [
   { name: "Ayesha", role: "user" },
   { name: "Usman", role: "manager" }
 ];
-users9.reduce((acc, val) => {})
+const groupedUsers = users9.reduce((acc, user) => {
+  // if role does not exist, create empty array
+  if (!acc[user.role]) {
+    acc[user.role] = [];
+  }
+  // push name into the correct role array
+  acc[user.role].push(user.name);
+  return acc;
+}, {});
+// console.log(groupedUsers);
+
+// Question 2 — API-style data cleanup
+/* Tasks:
+1️⃣ keep only active products
+2️⃣ convert to:
+{ name: "Laptop", price: 80000 }
+3️⃣ find total price of active products*/
+const apiProducts9 = [
+  { id: 1, title: "Laptop", price: 80000, active: true },
+  { id: 2, title: "Mouse", price: 800, active: false },
+  { id: 3, title: "Keyboard", price: 1500, active: true }
+];
+// // console.log(apiProducts9.filter((act) => act.active == true)
+// .map((sh) => ({
+//   name: sh.title,
+//   price: sh.price
+// })).reduce((acc,sm) => acc + sm.price, 0))
+
+
+// Question 3 — Most frequent value (classic interview)
+/* Goal:
+"error"
+👉 Only reduce
+👉 Hint: first count, then decide max */
+const logs9 = [
+  "error",
+  "info",
+  "error",
+  "warning",
+  "info",
+  "error"
+];
+let again = logs9.reduce((acc,rep) => {
+  acc[rep] = (acc[rep] || 0) + 1
+  return acc
+},{})
+// console.log(again);
+
+let big = Object.keys(again).reduce((acc,key) => {
+  return again[key] > again[acc] ? key : acc;
+})
+// console.log(big);
+
+
+// 🧠🔥 STEP 10 — MASTER LEVEL (REAL APP LOGIC)
+// This step mirrors production code.
+// One problem = map + filter + reduce thinking, even if you don’t literally call all three.
+// Take your time. No rushing.
+/* 🎯 Your Tasks
+1️⃣ Keep only completed orders
+2️⃣ Group total spending per user
+3️⃣ Find the user with the highest total spend
+✅ Expected Output
+{
+  user: "Ali",
+  total: 1200
+} */ 
+const orders10 = [
+  { id: 1, user: "Ali", status: "completed", amount: 500 },
+  { id: 2, user: "Sara", status: "pending", amount: 300 },
+  { id: 3, user: "Ali", status: "completed", amount: 700 },
+  { id: 4, user: "Ahmed", status: "completed", amount: 400 },
+  { id: 5, user: "Ali", status: "cancelled", amount: 200 },
+  { id: 6, user: "Ahmed", status: "completed", amount: 600 }
+];
 
 
 
