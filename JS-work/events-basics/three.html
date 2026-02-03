@@ -6,12 +6,33 @@
     <title>Next File</title>
 </head>
 <body>
-    <h1>This is a new file</h1>
+    <h1>Start should chage the background color every second and the end button should end this.</h1>
     <button id="start">Start</button>
     <button id="stop">Stop</button>
 
 </body>
 <script>
     
+// generate a random color
+const randomNumber = function () {
+    const hex = '0123456789ABCDEF'
+    let color = '#'
+    for (let i = 0; i < 6; i++) {
+       color += hex[Math.floor(Math.random() * 16)]
+    }
+    return color
+}
+let itrid
+const startChangingColor = function(){
+     itrid = setInterval(changeBgColor, 1000)
+    function changeBgColor(){
+        document.body.style.backgroundColor = randomNumber()
+    }
+}
+const stopChangingColor = function(){
+    clearInterval(itrid)
+}
+document.querySelector('#start').addEventListener('click', startChangingColor)
+document.querySelector('#stop').addEventListener('click', stopChangingColor)
 </script>
 </html>
