@@ -11,6 +11,21 @@
 <button id="stop">Stop</button>
 </body>
 <script>
+    const myName = function (){
+        console.log("My name is Talha");
+    }
+
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = "Ahmad is the Boss"
+    }
+
+    const changeMe = setTimeout(changeText, 2000)
     
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(changeMe)
+        console.log("STOPPED");
+        
+    })
+
 </script>
 </html>
