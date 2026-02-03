@@ -265,6 +265,42 @@ const orders10 = [
   { id: 5, user: "Ali", status: "cancelled", amount: 200 },
   { id: 6, user: "Ahmed", status: "completed", amount: 600 }
 ];
+let compl = orders10.filter((of) => of.status === "completed")
+console.log(compl);
+
+let spt = compl.map((rs) => ({
+  name: rs.user,
+  amount: rs.amount
+}))
+console.log(spt);
+
+//copied from GPT // unclear for the group... need to work on grouping
+let grouped = compl.reduce((acc, order) => {
+  if (!acc[order.user]) {
+    acc[order.user] = 0;
+  }
+  acc[order.user] += order.amount;
+  return acc;
+}, {});
+
+console.log(grouped);
+
+const topUser = Object.keys(grouped).reduce((maxUser, user) => {
+  return grouped[user] > grouped[maxUser] ? user : maxUser;
+});
+
+console.log({ user: topUser, total: grouped[topUser] });
+
+
+
+// let gp = compl.reduce((acc, grp) => {
+  
+// }, {})
+// console.log(gp);
+
+
+
+
 
 
 
