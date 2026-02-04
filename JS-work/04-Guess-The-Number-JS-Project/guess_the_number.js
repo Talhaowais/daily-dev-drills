@@ -8,7 +8,7 @@ const start = document.querySelector('.resultParas')
 
 const p =document.createElement('p');
 let prevGuess = [];
-let  numberGuess = 1;
+// let  numberGuess = 0;
 
 let playGame = true;
 
@@ -24,13 +24,14 @@ if(playGame){
 function validateGuess (guess) {
     if(isNaN(guess)){
         alert('Please enter a valid number');
-    }else if(isNaN(guess < 1)){
+    }else if((guess < 1)){
         alert('Please enter a number greater than 1');
-    }else if(isNaN(guess > 100)){
+    }else if((guess > 100)){
         alert('Please enter a number below 100');
     }else{
         prevGuess.push(guess);
-        if(numberGuess === 11){
+        // numberGuess++;
+        if(prevGuess.length > 9){
             displayGuess(guess)
             displayMessage(`Game Over. Random number was ${randomNumber}`)
             endGame();
@@ -47,17 +48,16 @@ function checkGuess (guess) {
         displayMessage('You guessed it right. Congrats')
         endGame()
     }else if(randomNumber < guess){
-        displayMessage('Number is Tooo Low')
-    }else if(randomNumber > guess){
         displayMessage('Number is Tooo High')
+    }else if(randomNumber > guess){
+        displayMessage('Number is Tooo Low')
     }
 };
 
 function displayGuess (guess) {
     userInput.value = '';
-    guessSlots.innerHTML += `${guess}, `
-    numberGuess++;
-    remainingSlots.innerHTML =+ `${11-numberGuess}`
+    guessSlots.innerHTML = `${prevGuess.join(", ")} `
+    remainingSlots.innerHTML =+ `${10-prevGuess.length}`
 };
 
 function displayMessage (message) {
@@ -79,9 +79,9 @@ function newGame () {
     newGameButton.addEventListener('click', function(){
         randomNumber = parseInt(Math.random() * 100 + 1);
         prevGuess = [];
-        numberGuess = 1;
+        // numberGuess = 0;
         guessSlots.innerHTML = '';
-        remainingSlots.innerHTML = `${11 - numberGuess}`;
+        remainingSlots.innerHTML = `${10 - prevGuess.length}`;
         lowOrHigh.innerHTML = '';
         userInput.removeAttribute('disabled');
         start.removeChild(p);

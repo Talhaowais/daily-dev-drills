@@ -24,9 +24,9 @@ const randomNumber = function () {
 }
 let itrid
 const startChangingColor = function(){
-     itrid = setInterval(changeBgColor, 1000)
-    function changeBgColor(){
-        document.body.style.backgroundColor = randomNumber()
+     itrid = setInterval(changeBgColor, 1000, randomNumber)
+    function changeBgColor(color){
+        document.body.style.backgroundColor = color()
     }
 }
 const stopChangingColor = function(){
