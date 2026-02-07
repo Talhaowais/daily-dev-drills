@@ -32,7 +32,7 @@ const promiseThree = new Promise(function(resolve, reject){
     }, 1000);
 })
 promiseThree.then(function(user){
-    console.log(user);
+    // console.log(user);
     // console.log("3rd promise is completed");
 
 })
