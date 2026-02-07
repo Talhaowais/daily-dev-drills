@@ -1,26 +1,25 @@
-const { use } = require("react");
 
 // creating a promise and assigning it to a variable    
 const promiseOne = new Promise(function(resolve, reject){
     setTimeout(function(){
-        console.log("1st Async task is complete");
+        // console.log("1st Async task is complete");
         resolve()
     }, 1000)
 })
 
 promiseOne.then(function(){
-    console.log("1st promise is completed");
+    // console.log("1st promise is completed");
 })
 
 
 // 2nd method
 new Promise(function(resolve, reject){
     setTimeout(function(){
-        console.log("2nd Async task is complete");
+        // console.log("2nd Async task is complete");
         resolve()
     }, 1000);
 }).then(function(){
-    console.log("2nd promise is completed");
+    // console.log("2nd promise is completed");
 })
 
 
