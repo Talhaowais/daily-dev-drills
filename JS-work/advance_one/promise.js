@@ -38,22 +38,42 @@ promiseThree.then(function(user){
 })
 
 // The use of reject
-const fourthPromise = Promise((function(resolve, reject){
+const fourthPromise = new Promise((function(resolve, reject){
     setTimeout(function(){
-        let error = true
+        let error = false
         if(!error){
-            resolve({username: "Talha-2", email: "2nd-talhaowais345@gmail.com"})
+            resolve({name1: "Talha-2", email: "2nd-talhaowais345@gmail.com"})
         }else{
             reject("Error:You're missing something")
         }
     }, 1000)
 }))
 fourthPromise.then((user) => {
-    console.log(user);
-    return user.username
-}).then(() => {
-    console.log(username);
+    // console.log(user);
+    return user.name1
+}).then((name1) => {
+    // console.log(name1);
 }).catch(function(error){
-    console.log(error);
-    
-})
+    // console.log(error);
+}).finally(() => console.log("The promise is either resolved or reject"))
+
+// we can either do try and catch or use .then or .catch
+const fifthPromise = new Promise((function(resolve, reject){
+    setTimeout(function(){
+        let error = true
+        if(!error){
+            resolve({name3: "Talha-3", email: "3rd-talhaowais345@gmail.com"})
+        }else{
+            reject("Error:You're missing something")
+        }
+    }, 1000)
+}))
+async function newFifthPromise(){
+    try {
+        const response = await fifthPromise
+        console.log(response);
+    } catch (error) {
+        console.log(error);
+    }
+}
+newFifthPromise()
