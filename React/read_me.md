@@ -38,3 +38,21 @@ npm create vite@latest
 npm install
 <!-- Then same as above to run the project/scripts use --> See what scripts we have under package.json
 npm run dev
+
+<!-- To inject the tailwind in any project do these steps -->
+FIrst create a project then go into that folder from cdm terminal
+<!-- Then run this command -->
+npm install tailwindcss @tailwindcss/vite
+<!-- A file will be added into the project, then go into the file of vite.config.ts and add these -->
+The two commented lines in the below code
+import { defineConfig } from 'vite'
+<!-- import tailwindcss from '@tailwindcss/vite' -->
+
+export default defineConfig({
+  plugins: [
+    <!-- tailwindcss(), -->
+  ],
+})
+
+<!-- Then in the main.css add this -->
+@import "tailwindcss";
