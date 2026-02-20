@@ -112,5 +112,32 @@ for(var i = 0; i < 10; i++){
 
 Result: It will print 10, ten times
 // to fix this we can simply change var to let, then it print 0123456789
+```
+
+## 8th Question
+```javascript 
+// What will log on console
+let user = {name: "Talha"};
+const userList = [user];
+user = null;
+console.log(userList);
+// Result: user ko null krny sa userList main jo us ka refersnce ha wo null ni ho ga, 
+// or humain log main [{name: "Talha"}] hi show ho ga
+```
+
+## 9th Question
+```javascript 
+// What will log on console
+function b (){
+    var a = b = 3;
+}
+b()
+console.log("a defined? " + (typeof a !== "undefined"));
+console.log("b defined? " + (typeof b !== "undefined"));
+
+// Result: 
+// a defined? false
+// b defined? true
+
 
 ```
