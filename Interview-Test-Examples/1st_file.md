@@ -138,6 +138,86 @@ console.log("b defined? " + (typeof b !== "undefined"));
 // Result: 
 // a defined? false
 // b defined? true
+```
+
+## 10th Question
+```javascript 
+// Can we use object as a key in JS? 
+// What will be the Output
+var a = {},
+b = {key:'b'},
+c = {key: 'c'};
+a[b] = 123;
+a[c] = 456;
+console.log(a[b]);
+
+// Result 456
+// because jab hum kis object ko as a key use krty hain to JS aik special type ki 
+// string create krta ha [object Object], is liay yeh result ay ga.
+```
+
+## 11th Question
+```javascript 
+// What will be the Output
+fucntion showdata(){
+  console.log("The name is: ", name)
+  console.log("The age is: ", age)
+  var name = "Talha"
+  let age = 27
+}
+showdata()
+//  we got an error, and nothing will be shown 
+// as during execution the var will be executed on the top of function, like var name; 
+// but in case of let variable we got an error "cannot access age before initialization"
+Result: the name will be undefined and the the age will have reference error.
+```
+
+## 12th Question
+```javascript 
+// What will be the Output
+for(var i = 0; i < 4; i++){
+  setTimeout(() => console.log(i), 1000)
+}
+for(let i = 0; i < 4; i++){
+  setTimeout(() => console.log(i), 1000)
+}
+
+// Result: for the 1st loop it will print 4 four times as var i will move to the top of fucntion.
+// in case of 2nd loop it will print different values of i in each iteration
+```
+
+## 13th Question
+```javascript 
+// What will be the Output, check our this knowledge
+const income = {
+  skills: 108,
+  monthly(){
+    return this.skills * 108;
+  },
+  yearly: () => 888 * this.skills,
+}
+console.log(income.monthly())
+console.log(income.yearly())
+
+// Result 1st console: 11664
+// Result 2nd console: NaN
+// because in arrow function the scope of (this) is of its parent which is window.
+```
+
+## 14th Question
+```javascript 
+// What will be the Output
+console.log(+true)
+console.log(!"JavaScript")
+
+// Result 1st console: 1
+// Result 2nd console: false
+// jab bi hum + operator use krty hain kisi bi data type k sat to wo us data type ko number main convert kr deta ha.
+```
+
+## 15th Question
+```javascript 
+// What will be the Output
 
 
 ```
