@@ -217,7 +217,99 @@ console.log(!"JavaScript")
 
 ## 15th Question
 ```javascript 
+// Which is the wrong way to access an object
+const code = {
+  type:"web"
+  };
+const reactJS = {
+  name: "JS"
+  web: true
+  }
+// Options: 
+// 1- reactJS[code.type]
+// 2- reactJS[reactJS][type]
+// 3- code.type.web 
+// All are valid
+
+// Result: 3 is not valid
+```
+
+## 16th Question
+```javascript 
 // What will be the Output
+let a = 108;
+let b = new Number(108)
+let c = 108
+console.log(a == b)
+console.log(a === b)
+console.log(b === c)
 
+// Result: true
+// Result: false
+// Result: false
+// because === also compair data types
+```
 
+## 17th Question
+```javascript 
+// What will be the Output
+class Lizard{
+  static colorChange(newColor){
+    this.newColor = newColor;
+    return this.newColor
+  }
+constructor({newColor = "orange"} = {}){
+  this.newColor = newColor;
+}
+}
+const tommy = new Lizard({newColor: "orange"})
+console.log(tommy.colorChange("blue"))
+// Result: it give Uncaught TypeError: tommy.colorChange is not a function
+// As static methods are not avaiable on class instance
+// if we want to run this code Lizard.colorChange and it will give the correct result
+```
+
+## 18th Question
+```javascript 
+// What will be the Output
+let message;
+mesage = {data: [20]}
+console.log(mesage)
+// Result: {data: Array(1)}
+// it would not give error becasue JS will declair the mesage in window scope, so it will run
+// if we want that JS to give error, we use "use strice"; on the top of program
+```
+
+## 19th Question
+```javascript 
+// What will be the Output
+function showModel(){
+  console.log(showModel.timeout)
+}
+showModel();
+showModel.timeout = 200
+showModel.timeout = 100
+showModel()
+// Result: undefined
+// Result: 100
+// it will give 100 because we are giving 100 and then calling the function
+```
+
+## 20th Question
+```javascript 
+// What will be the Output
+function human(fname, lname){
+  this.fname = fname;
+  this.lname = lname;
+}
+const MrX = new human("Mr.", "X")
+const RoxK = human("The", "Rock")
+console.log(MrX)
+console.log(RoxK)
+// Result: human {fname: 'Mr.', lname: 'X'}
+// Result: undefined
+// because jab bi hum new keyword k sat fucntion call krty hain to wo object return krta ha, or us object main hum keys this keyword sa add kr skty hain...
+// 2nd main undefined is liy mily ga ku k wo 1 normal call or fucntion kuch return ni kr rha is liy...
+
+// done till 22/405
 ```
