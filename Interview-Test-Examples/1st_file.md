@@ -447,6 +447,88 @@ for (let i = 1; i < 5; i++){
 ## 31st Question
 ```javascript 
 // What will be the Output
+String.prototype.youAreAmazing = () => {
+  return "You are amazing my friend."
+}
+const who = "viewer"
+console.log(who.youAreAmazing())
+// Result: You are amazing my friend.
+// because of prototype as it is use to share the functionality between objects and function
+```
 
-// 33/405
+## 32nd Question
+```javascript 
+// What will be the Output
+const a = {}
+const b = {key: "b"}
+const c = {key: "c"}
+a[b] = 222;
+a[c] = 999;
+console.log(a[b]) // 999
+// Result: object is using as a  key within an object, so it will return [object Object] as a string
+```
+
+## 33th Question
+```javascript 
+// What will be the Output
+const lang = {name: "Talha"}
+function getLib(ver){
+  return `${this.name} version ${ver}`
+}
+console.log(getLib.call(lang, 18)); // Talha version 18
+console.log(getLib.bind(lang, 18)); // ƒ getLib(ver){
+//   return `${this.name} version ${ver}`
+// }
+```
+
+## 34th Question
+```javascript 
+// What will be the Output
+function sayHi(){
+  return (() => 0)();
+}
+console.log(typeof sayHi()) // number
+// because its returing a number
+```
+
+## 35th Question
+```javascript 
+// What will be the Output
+console.log(typeof typeof 1) // string
+// as everything is executed from right to left, so 1stly it return (typeof "number") then its a string
+```
+
+## 36th Question
+```javascript 
+// What will be the Output
+const numbers = [1,2,3]
+numbers[10] = 11;
+console.log(numbers) // [1, 2, 3, empty × 7, 11]
+// it create empty slots and insert the val in the given index
+```
+
+## 37th Question
+```javascript 
+// What will be the Output
+// discuss =>  what is this iffi ??
+(() => {
+  let x, y;
+  try{
+    throw new Error();
+  }catch (x){
+    (x = 1), (y = 2) // in this we are settign the values for the local scope
+    console.log(x) // 1
+  }
+    console.log(x); // undefined
+    console.log(y); // 2
+})();
+```
+
+## 38th Question
+```javascript 
+// What will be the Output
+const data = [..."Apple"] // (...) by using dots we are destructuring the array
+console.log(data) // (5) ['A', 'p', 'p', 'l', 'e']
+
+// 40/405
 ```
