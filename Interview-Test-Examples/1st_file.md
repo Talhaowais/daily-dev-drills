@@ -313,3 +313,140 @@ console.log(RoxK)
 
 // done till 22/405
 ```
+
+## 21st Question
+```javascript 
+// What are the 3 phases of event propagation
+// Answer: Capturing, Target, bubbling
+```
+
+## 22nd Question
+```javascript 
+// What will be the Output
+fucntion sum(a, b){
+  return a+ b;
+}
+console.log(sum(10, "10"))
+// Result: 1010
+// because in JS when we use + with string it concatinates both
+```
+
+## 23rd Question
+```javascript 
+// What will be the Output
+// discuss
+function getsumry(one, two, three){
+  console.log(one)
+  console.log(two)
+  console.log(three)
+}
+const fname = "Talha"
+const age = 28;
+getsumry`${fname} age is ${age}`
+// Result: (3) ['', ' age is ', '', raw: Array(3)]
+//  Talha
+//  28
+// because jab bi hum function call krty hain ksi template litral 
+// k sat to humain as a array return hoti ha, with empty variables
+```
+
+## 24th Question
+```javascript 
+// What will be the Output
+function checkAge(data){
+  if (data === {age: 18}){
+    console.log("You are adult")
+  }else if (data == {age: 18}){
+    console.log("You are still an adult")
+  }else{
+    console.log("hummm.... no age")
+  }
+}
+checkAge({age: 18})
+// Result: hummm.... no age
+// because as objects are reference based so it looks same but arenot actually
+```
+
+## 25th Question
+```javascript 
+// What will be the Output
+function getType(...args){
+  console.log(typeof args) //object
+  console.log(Array.isArray(args)) // true
+}
+getType(108)
+// In jS array has not type sab object hota ha... to is liy jab log kry gy to humain Object show ho ga.
+// if we want to check if its array we can use buitl in method Array.isArray(args) 
+```
+
+## 26th Question
+```javascript 
+// What will be the Output
+function getAge(){
+  "use strict"
+  salary = 8121
+  console.log(salary)
+}
+getAge();
+// ReferenceError: salary is not defined
+// becasue we use the strict mode
+```
+
+## 27th Question
+```javascript 
+// What will be the Output
+var num = 8;
+var num = 10;
+console.log(num)
+// result: 10
+// because we can declair the same variable name using var.
+```
+
+## 28th Question
+```javascript 
+// What will be the Output
+const obj = {
+  1: "a",
+  2: "b",
+  3: "c",
+}
+const set = new Set([1,2,3,4,5])
+console.log(object.hasOwnProperty("1")) // true
+console.log(object.hasOwnProperty(1)) // true
+console.log(set.has("1")) // false, because array dont have any string value
+console.log(set.has(1)) // true
+```
+
+## 29th Question
+```javascript 
+// What will be the Output
+const obj = {
+  a: "1",
+  b: "2",
+  a: "3",
+}
+console.log(obj)
+// result: {a: '3', b: '2'}
+// jo key bad main define ki ha wo obj main dikhny ko mily gy, 
+// soso if we use duplicate value the last one get update
+```
+
+## 30th Question
+```javascript 
+// What will be the Output
+for (let i = 1; i < 5; i++){
+  if(i === 3) continue;
+  console.log(i);
+}
+// result: 1
+// 2
+// 4
+// it will skip 3 because of continue, and print all the remaining values
+```
+
+## 31st Question
+```javascript 
+// What will be the Output
+
+// 33/405
+```
