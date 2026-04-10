@@ -7,7 +7,7 @@ One of the key reasons we use React instead of plain JavaScript is its Virtual D
 
 ## 2nd: What is the Virtual DOM, and how does it work?
 ```javascript 
-The Virtual DOM is a lightweight copy of the real DOM maintained by React. When the state or props of a component change, React creates a new Virtual DOM tree and compares it with the previous one using a process called diffing.
+The Virtual DOM is a lightweight copy of the real DOM maintained by React. When the state or props of a component change, React creates a new Virtual DOM tree and compares it with the previous one using a process called diffing(its an algorith)
 
 React then calculates the minimal changes required and updates only those parts in the real DOM. This process is called reconciliation and it improves performance by avoiding unnecessary full DOM updates.
 ```
@@ -15,7 +15,7 @@ React then calculates the minimal changes required and updates only those parts 
 ## 3rd: What is the difference between state and props in React?
 ```javascript 
 Props are used to pass data from a parent component to a child component and are read-only. State, on the other hand, is managed within a component and can be updated to make the UI dynamic. Props are immutable, while state is mutable.
-```
+``` 
 
 ## 4th: What is a functional component? How is it different from a class component?
 ```javascript 
@@ -71,6 +71,40 @@ function Users() {
 
   return <div>{users.length}</div>;
 }
+
+1. No Dependency Array
+useEffect(() => {
+  console.log("Runs on every render");
+});
+👉 Runs on every render
+
+2. Empty Dependency Array
+useEffect(() => {
+  console.log("Runs only once");
+}, []);
+👉 Runs only on mount (like componentDidMount)
+
+3. With Dependencies
+useEffect(() => {
+  console.log("Runs when count changes");
+}, [count]);
+👉 Runs:
+On mount
+When count changes
+
+4. Cleanup Function (VERY IMPORTANT 🔥)
+useEffect(() => {
+  const timer = setInterval(() => {
+    console.log("Running...");
+  }, 1000);
+
+  return () => {
+    clearInterval(timer);
+  };
+}, []);
+👉 Cleanup runs:
+Before unmount
+Before next effect runs
 ```
 
 ## 8th: What is the difference between useEffect and useLayoutEffect?
@@ -86,4 +120,69 @@ Lifting state up is moving the state to a common parent so that multiple compone
 ## 10th: What is the difference between controlled and uncontrolled components in React?
 ```javascript 
 Controlled components use React state to manage form data, while uncontrolled components rely on the DOM using refs. Controlled components are preferred because they provide better control and validation.
+```
+
+## 11th: What is React Router and why do we use it?
+```javascript 
+React Router is a library used for handling navigation in React applications. It allows us to create different routes (pages) in a single-page application without reloading the page. It enables dynamic routing and improves user experience.
+```
+
+## 12th: What is a Single Page Application (SPA)?
+```javascript 
+A Single Page Application is a web application that loads a single HTML page and dynamically updates the content without reloading the entire page. React is commonly used to build SPAs.
+```
+
+## 13th: What is useContext?
+```javascript 
+useContext is a React Hook used to access global data without passing props manually through every level (prop drilling). It works with the Context API.
+```
+
+## 14th: What is Prop Drilling?
+```javascript 
+Prop drilling is the process of passing data from a parent component to deeply nested child components through multiple layers, even if intermediate components do not need the data.
+```
+
+## 15th: How do you prevent unnecessary re-renders in React?
+```javascript 
+We can prevent unnecessary re-renders using techniques like:
+
+React.memo
+useMemo
+useCallback
+Proper state management
+```
+
+## 16th: What is React.memo?
+```javascript 
+React.memo is a higher-order component that prevents re-rendering of a component if its props have not changed.
+```
+
+## 17th: What is useMemo?
+```javascript 
+useMemo is a hook used to memoize a computed value so it is not recalculated on every render unless its dependencies change.
+```
+
+## 18th: What is useCallback?
+```javascript 
+useCallback is a hook that memoizes a function so it is not recreated on every render unless its dependencies change.
+```
+
+## 19th: What is the difference between useMemo and useCallback?
+```javascript 
+useMemo memoizes a value, while useCallback memoizes a function.
+```
+
+## 20th: What is key prop in React?
+```javascript 
+The key prop is a unique identifier used in lists to help React identify which items have changed, been added, or removed. It improves performance during re-rendering.
+```
+
+## 21st:
+```javascript 
+
+```
+
+## 22nd:
+```javascript 
+
 ```
