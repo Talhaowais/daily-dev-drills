@@ -31,7 +31,7 @@ Output: 5 -->
 ```javascript
 function countChars(str) {
   let count = 0;
-  for (let _ of str) {
+  for (let char of str) {
     count++;
   }
   return count;
