@@ -1,8 +1,12 @@
-function ChrSTR(str){
+function Consonent(str){
+    let vowels = "aeiouAEIOU"
     let count = 0;
-    for (let chr of str){
-        count ++
+    for (let char of str){
+        if(char.toLowerCase() >= 'a' && char.toLowerCase() <= 'z' && !vowels.includes(char))
+        {
+            count++;
+        }
     }
     return count;
 }
-console.log(ChrSTR("talhasdwea"));
+console.log(Consonent("this is a test123@"));
